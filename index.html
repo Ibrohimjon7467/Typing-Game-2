@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Typing Game</title>
+</head>
+
+<body>
+  <!-- input -->
+  <div class="input-container hidden">
+    <div class="container">
+      <h1 id="random-word">Awesome</h1>
+      <div class="input-container">
+        <input id="user-word" type="text" placeholder="typing...">
+      </div>
+    </div>
+
+    <div class="score-container">
+      <h3>Score: <span id="score">0</span></h3>
+      <h3>Time: <span id="time">10s</span></h3>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="modal name-modal" id="name-modal">
+      <form class="modal-body">
+        <input type="text" name="username-input" id="username-input" required="required" class="name-modal" placeholder="Enter your username">
+        <label for="username-input"></label>
+        <button type="submit" id="start-game">O'yinni boshlash</button>
+      </form>
+    </div>
+  </div>
+  <!-- Restart Modal -->
+  <div class="wrapper">
+    <div class="modal hidden" id="restart-modal">
+      <div class="modal-body" id="end-modal">
+        <h3 id="name-span"></h3>
+        <p>Sizning to'plagan balingiz: <span id="umumiy-bal"></span></p>
+        <button class="restart-btn">restart</button>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  
+  <!-- JS -->
+  <script src="./js/words.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
